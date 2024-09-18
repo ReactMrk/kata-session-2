@@ -20,27 +20,8 @@ After some time on production, a new requirement has been requested. When agent 
 
 To do this improvement, principal engineer suggested you to create a component using useEffect that displays an alert on the top of the list when a new client is added. The alert should be displayed for 2 seconds.
 
-**Modify src/Alert.jsx file**
-
-**Extra:** principal engineer saids that this hook maybe needed for other components. Once this effect is working, could you refactor it to be a custom hook?
+**Use src/Alert.jsx file**
 
 **Exercise 2.**
 
-Client Management System is mind to be a large application, so in a future new react compoments related with clients will be added. Variables client and setClient will be the parameters for these new react components. In order to avoid these variables being passed again and again from parent to children, principal engineer suggested you to create a context.
-
-**To create the context, modify src/ClientContext.js file**
-
-**Exercise 3.**
-
-Once a client is added to the list, the fields are not cleaned. The principal engineer tells you to fix the issue using useReduce, in order to avoid a set of functions, that modify the state, being triggered in a row.
-
-Principal engineer would like to avoid this bad practise:<br />
-**setName(''); <br />
-setEmail(''); <br />
-setPhone(''); <br />
-setAddress(''); <br />**
-
-When state updates are frequent and/or complex, useReducer provides better performance through its centralized update logic, avoiding unnecessary re-renders and excessive state management code.
-
-**Could you also create a clear button?**
-
+Principal engineer saids that this hook maybe needed for other components. Once this effect is working, could you refactor it to be a custom hook?
