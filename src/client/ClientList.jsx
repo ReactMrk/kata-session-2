@@ -1,8 +1,8 @@
-const ClientList = ({ client }) => {
+const ClientList = ({ clients }) => {
   return(
     <ul className="client-list">
       {
-        client.map(client => {
+        clients.map(client => {
           return (
             <li key={client.email}>
               <strong>{client.name}</strong><br />

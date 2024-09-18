@@ -1,5 +1,4 @@
-import { useContext, useReducer } from 'react';
-import { ClientContext } from './ClientContext';
+import { useReducer } from 'react';
 
 const initalFormValue = {
     name: '',
@@ -39,9 +38,8 @@ const reducer = (state, action) => {
   }
 };
 
-const ClientForm = () => {
+const ClientForm = ({ setClients }) => {
   const [form, dispatchForm] = useReducer(reducer, initalFormValue);
-  const { setClients } = useContext(ClientContext);
   const submitEmployee = () => {
     setClients(prev => [
       ...prev,
