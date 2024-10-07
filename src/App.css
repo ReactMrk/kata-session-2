@@ -64,13 +64,17 @@ input[type="submit"]:hover, input[type="button"]:hover {
 }
 
 .visible {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 1s linear;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+  height: auto;
 }
 
 .hidden {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.5s, opacity 0.5s linear;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+  margin: 0;
+  padding: 0;
 }
