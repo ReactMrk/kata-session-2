@@ -8,9 +8,13 @@ const ClientManagement = () => {
     const [loggedIn, setLoggedIn] = useState(true);
     const [homeAlertText, setHomeAlertText] = useState("");
     const [homeAlertVisible, setHomeAlertVisible] = useState(false);
+    const handleLogin = (loggedIn) => () => {
+        !loggedIn && setClients([]);
+        setLoggedIn(!loggedIn);
+    }
     return (
         <>
-            <button onClick={()=>setLoggedIn(!loggedIn)}>{loggedIn ? "Logout" : "Login"}</button>
+            <button onClick={handleLogin(loggedIn)}>{loggedIn ? "Logout" : "Login"}</button>
             <Alert visible={homeAlertVisible} text={homeAlertText}/>
             {loggedIn && (
                 <>

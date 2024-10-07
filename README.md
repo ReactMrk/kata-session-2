@@ -28,8 +28,9 @@ The stakeholders have pointed out that they would like to implement a login/logo
 Your new requirements are:
 
 - A new set of Login Logout buttons have been added to the page.
-- The first time the list is loaded an Alert should be displayed with the following text: "Welcome to the client list". The alert should be displayed for 2 seconds.
+- The first time the list is loaded an Alert should be displayed with the following text: "Welcome to the Client List". The alert should be displayed for 3 seconds.
 - When the clients are added it should still behave as per exercise 1
-- When the logout button is pressed an Alert with the following text should be displayed: "Goodbye"
-- Implement the functionality using useEffect without modifying the App.jsx file. 
+- When the logout button is pressed an Alert with the following text should be displayed: "Goodbye". The alert should be displayed for 3 seconds.
+- Implement the functionality using useEffect.
+- You can only modify the ClientList.jsx
 
