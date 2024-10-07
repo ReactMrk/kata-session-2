@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import ClientAddedAlert from "./ClientAddedAlert";
+import Alert from "./Alert";
 
 const ClientList = ({clients}) => {
     const [clientAlert, setClientAlert] = useState(false);
@@ -13,7 +13,7 @@ const ClientList = ({clients}) => {
     }, [clients])
     return (
         <>
-            <ClientAddedAlert visible={clientAlert}/>
+            <Alert visible={clientAlert} text={" New client has been added "}/>
             <ul className="client-list">
                 {
                     clients.map(client => {

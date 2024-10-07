@@ -1,4 +1,4 @@
-const HomeAlerts = ({visible, text}) => {
+const Alert = ({visible, text}) => {
     const classNames = visible ? "visible" : "hidden"
   return (
     <div className={"alert "+classNames}>
@@ -7,4 +7,4 @@ const HomeAlerts = ({visible, text}) => {
   );
 };
 
-export default HomeAlerts;
+export default Alert;

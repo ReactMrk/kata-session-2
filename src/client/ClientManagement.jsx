@@ -1,19 +1,21 @@
 import {useState} from 'react';
 import ClientForm from "./ClientForm";
 import ClientList from "./ClientList";
-import HomeAlerts from "./HomeAlerts";
+import Alert from "./Alert";
 
 const ClientManagement = () => {
     const [clients, setClients] = useState([]);
     const [loggedIn, setLoggedIn] = useState(true);
+    const [homeAlertText, setHomeAlertText] = useState("");
+    const [homeAlertVisible, setHomeAlertVisible] = useState(false);
     return (
         <>
             <button onClick={()=>setLoggedIn(!loggedIn)}>{loggedIn ? "Logout" : "Login"}</button>
+            <Alert visible={homeAlertVisible} text={homeAlertText}/>
             {loggedIn && (
                 <>
-                    <HomeAlerts visible={true} text={"Welcome to Client Management"}/>
                     <ClientForm setClients={setClients}/>
-                    <ClientList clients={clients}/>
+                    <ClientList clients={clients} setHomeAlertVisible={setHomeAlertVisible} setHomeAlertText={setHomeAlertText} />
                 </>
             )}
         </>
