@@ -1,4 +1,4 @@
-const Alert = ({visible}) => {
+const ClientAddedAlert = ({visible}) => {
     const classNames = visible ? "visible" : "hidden"
   return (
     <div className={"alert "+classNames}>
@@ -7,4 +7,4 @@ const Alert = ({visible}) => {
   );
 };
 
-export default Alert;
+export default ClientAddedAlert;
