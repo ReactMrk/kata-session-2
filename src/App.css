@@ -62,3 +62,15 @@ input[type="submit"]:hover, input[type="button"]:hover {
   color: white;
   width: 50%;
 }
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}

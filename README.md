@@ -24,4 +24,12 @@ To do this improvement, principal engineer suggested you to create a component u
 
 **Exercise 2.**
 
-Principal engineer saids that this hook maybe needed for other components. Once this effect is working, could you refactor it to be a custom hook?
+The stakeholders have pointed out that they would like to implement a login/logout functionality. As an initial step we will introduce the behaviour with a button only.
+Your new requirements are:
+
+- A new set of Login Logout buttons have been added to the page.
+- The first time the list is loaded an Alert should be displayed with the following text: "Welcome to the client list". The alert should be displayed for 2 seconds.
+- When the clients are added it should still behave as per exercise 1
+- When the logout button is pressed an Alert with the following text should be displayed: "Goodbye"
+- Implement the functionality using useEffect without modifying the App.jsx file. 
+
