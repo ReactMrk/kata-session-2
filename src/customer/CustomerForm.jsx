@@ -38,10 +38,10 @@ const reducer = (state, action) => {
   }
 };
 
-const ClientForm = ({ setClients }) => {
+const CustomerForm = ({ setCustomers }) => {
   const [form, dispatchForm] = useReducer(reducer, initalFormValue);
   const submitEmployee = () => {
-    setClients(prev => [
+    setCustomers(prev => [
       ...prev,
       {
         name: form.name,
@@ -58,10 +58,10 @@ const ClientForm = ({ setClients }) => {
       <input type="email" placeholder="Email" onChange={value => dispatchForm({ type: 'SET_EMAIL', value: value.target.value})} value={form.email} />
       <input type="tel" placeholder="Phone" onChange={value => dispatchForm({ type: 'SET_PHONE', value: value.target.value})} value={form.phone} />
       <input type="text" placeholder="Address" onChange={value => dispatchForm({ type: 'SET_ADDRESS', value: value.target.value})} value={form.address} />
-      <button onClick={() => submitEmployee()}>Add client</button>
+      <button onClick={() => submitEmployee()}>Add customer</button>
       <button onClick={() => dispatchForm({ type: 'CLEAR' })}>Clear</button>
     </div>
   )
 }
 
-export default ClientForm
+export default CustomerForm

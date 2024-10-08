@@ -1,15 +1,15 @@
 import {useState} from 'react';
-import ClientForm from "./ClientForm";
-import ClientList from "./ClientList";
+import CustomerForm from "./CustomerForm";
+import CustomerList from "./CustomerList";
 import Alert from "./Alert";
 
-const ClientManagement = () => {
-    const [clients, setClients] = useState([]);
+const CustomerManagement = () => {
+    const [customers, setCustomers] = useState([]);
     const [loggedIn, setLoggedIn] = useState(true);
     const [homeAlertText, setHomeAlertText] = useState("");
     const [homeAlertVisible, setHomeAlertVisible] = useState(false);
     const handleLogin = (loggedIn) => () => {
-        !loggedIn && setClients([]);
+        !loggedIn && setCustomers([]);
         setLoggedIn(!loggedIn);
     }
     return (
@@ -18,12 +18,12 @@ const ClientManagement = () => {
             <Alert visible={homeAlertVisible} text={homeAlertText}/>
             {loggedIn && (
                 <>
-                    <ClientForm setClients={setClients}/>
-                    <ClientList clients={clients} setHomeAlertVisible={setHomeAlertVisible} setHomeAlertText={setHomeAlertText} />
+                    <CustomerForm setCustomers={setCustomers}/>
+                    <CustomerList customers={customers} setHomeAlertVisible={setHomeAlertVisible} setHomeAlertText={setHomeAlertText} />
                 </>
             )}
         </>
     )
 };
 
-export default ClientManagement;
+export default CustomerManagement;
