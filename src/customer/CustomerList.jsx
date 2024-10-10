@@ -1,4 +1,29 @@
-const CustomerList = ({ customers }) => {
+import { useEffect } from "react";
+
+const CustomerList = ({ customers, setHomeAlertText }) => {
+  const showHomeAlert = (timeout, text) => {
+    setHomeAlertText(text);
+    setTimeout(() => {
+      setHomeAlertText("");
+    }, timeout);
+  };
+
+  useEffect(() => {
+    if (customers.length > 0) {
+      setHomeAlertText("New client added");
+      setTimeout(() => {
+        setHomeAlertText("");
+      }, 2000);
+    }
+  }, [customers]);
+
+  useEffect(() => {
+    showHomeAlert(3000, "Welcome to the Client List");
+    return () => {
+      showHomeAlert(3000, "Goodbye");
+    }
+  }, []);
+
   return (
     <ul className="customer-list">
       {

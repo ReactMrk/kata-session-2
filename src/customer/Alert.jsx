@@ -1,8 +1,8 @@
-const Alert = ({ visible, text }) => {
-  const classNames = visible ? "visible" : "hidden"
+const Alert = ({ homeAlertText }) => {
+  const classNames = homeAlertText ? "visible" : "hidden"
   return (
     <div className={"alert " + classNames}>
-      <p>{text}</p>
+      <p>{homeAlertText}</p>
     </div>
   );
 };

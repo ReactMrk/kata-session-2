@@ -7,7 +7,6 @@ const CustomerManagement = () => {
 	const [customers, setCustomers] = useState([]);
 	const [loggedIn, setLoggedIn] = useState(true);
 	const [homeAlertText, setHomeAlertText] = useState("");
-	const [homeAlertVisible, setHomeAlertVisible] = useState(false);
 	const handleLogin = loggedIn => () => {
 		!loggedIn && setCustomers([]);
 		setLoggedIn(!loggedIn);
@@ -15,11 +14,11 @@ const CustomerManagement = () => {
 	return (
 		<>
 			<button onClick={handleLogin(loggedIn)}>{loggedIn ? "Log out" : "Log in"}</button>
-			<Alert visible={homeAlertVisible} text={homeAlertText}/>
+			<Alert homeAlertText={homeAlertText}/>
 			{loggedIn && (
 				<>
 					<CustomerForm setCustomers={setCustomers}/>
-					<CustomerList customers={customers} setHomeAlertVisible={setHomeAlertVisible} setHomeAlertText={setHomeAlertText} />
+					<CustomerList customers={customers} setHomeAlertText={setHomeAlertText} />
 				</>
 			)}
 		</>
