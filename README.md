@@ -1,5 +1,3 @@
-Create and push a new branch using **git checkout -b kata-2-your-name** and **git push -u origin kata-2-your-name**
-
 # **Client management with react and hooks**
 
 The idea of our company is to create a large application to manage clients. Therefore, Client management, from the first session, has been redeveloped using React due to its scalability.
